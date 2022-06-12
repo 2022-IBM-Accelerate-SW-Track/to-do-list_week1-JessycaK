@@ -14,6 +14,7 @@ export default class NavbarComp extends Component {
     render() {
         return (
             <Router>
+                
             <div>
             <Navbar bg="dark" variant={"dark"} expand="lg">
                 <Container>
@@ -21,7 +22,7 @@ export default class NavbarComp extends Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to={"/"}> Home </Nav.Link>
+                     <Nav.Link as={Link} to={"/"}>Home </Nav.Link>
                         <Nav.Link as={Link} to={"/about"}>About</Nav.Link>
                     </Nav>
                     </Navbar.Collapse>
