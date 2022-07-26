@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import AddTodo from '../component/AddTodo';
-import Todos from '../component/todos';
-import './Home.css';
+import React, { Component } from "react";
+import AddTodo from "../component/AddTodo";
+import Todos from "../component/todos";
+import "./Home.css";
 
 class Home extends Component {
   // A default state of this component with an empty list of todos.
   constructor() {
     super();
     this.state = {
-       todos:[]
+      todos: [],
       // create your empty list here call it todos.
     };
   }
@@ -32,8 +32,13 @@ class Home extends Component {
     return (
       <div className="Home">
         <h1>My Todo List</h1>
-          <p> <Todos todos={this.state.todos} />
-          <AddTodo addTodo={this.addTodo} /></p>
+        {/* When passing the AddTodo component, addTodo is a prop that is used in the 
+        AddTodo.js file when handling the submit */}
+        <p>
+          {" "}
+          <Todos todos={this.state.todos} />
+          <AddTodo addTodo={this.addTodo} />
+        </p>
       </div>
     );
   }
